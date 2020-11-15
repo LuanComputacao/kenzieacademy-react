@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import routes from "./routes";
+import Home from "./components/pages/Home";
+import Curso from "./components/pages/Curso";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default function App() {
+    return (
+        <Router>
+            <div>
+                <nav>
+                    <ul>
+                        {Object.getOwnPropertyNames(routes).map(pName => {
+                            return (
+                                <li>
+                                    <Link to={routes[pName].route}>{routes[pName].text}</Link>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </nav>
+
+
+                <Switch>
+                    <Route path={routes.quemSomos.route}><About/></Route>
+                    <Route path={routes.curso.route}><Curso/></Route>
+                    <Route path={routes.home.route}><Home/></Route>
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
-export default App;
+
+
+function About() {
+    return <h2>About</h2>;
+}
+
