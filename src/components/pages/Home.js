@@ -9,7 +9,7 @@ import {text} from "../../styled/config"
 const MainBanner = styled.div`
   background: url(${bannerMulherCafe}) right;
   height: 100vh;
-  margin: -90px -15px 0;
+  margin: -60px -15px 0;
   padding-top: 90px;
   color: ${text.clear};
   
