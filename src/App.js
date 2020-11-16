@@ -8,6 +8,7 @@ import {
 import routes from "./routes";
 import Home from "./components/pages/Home";
 import Curso from "./components/pages/Curso";
+import {Container} from "react-bootstrap";
 
 
 export default function App() {
@@ -16,27 +17,25 @@ export default function App() {
             <div>
                 <nav>
                     <ul>
-                        {Object.getOwnPropertyNames(routes).map(pName => {
-                            return (
-                                <li>
-                                    <Link to={routes[pName].route}>{routes[pName].text}</Link>
-                                </li>
-                            )
-                        })}
+                        {Object.getOwnPropertyNames(routes).map(pName => (
+                            <li>
+                                <Link to={routes[pName].route}>{routes[pName].text}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
 
-
-                <Switch>
-                    <Route path={routes.quemSomos.route}><About/></Route>
-                    <Route path={routes.curso.route}><Curso/></Route>
-                    <Route path={routes.home.route}><Home/></Route>
-                </Switch>
+                <Container fluid>
+                    <Switch>
+                        <Route path={routes.quemSomos.route}><About/></Route>
+                        <Route path={routes.curso.route}><Curso/></Route>
+                        <Route path={routes.home.route}><Home/></Route>
+                    </Switch>
+                </Container>
             </div>
         </Router>
     );
 }
-
 
 
 function About() {

@@ -1,23 +1,19 @@
-const bgColors = {
+export const bgColors = {
     primary: '#00013C',
     secondary: '#248DFF',
     callToAction: '#00DBFF',
     callToAction2: '#8125A3',
-    clear: '#FFFFFF'
+    clear: '#FFFFFF',
+    grey: '#f7f7f7'
 }
 
-const text = {
-    grey: "#707070"
+export const text = {
+    grey: "#707070",
+    clear: '#FFFFFF',
 }
 
-const border = {
+export const border = {
     radius: '10px'
 }
 
-const configs = {
-    text,
-    border,
-    bgColors
-}
-
-export default configs
+export const gutter = '1em'

@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import okBubble from "../../images/ok-bubble.svg"
-import colors from "../../styled/config"
+import {text} from "../../styled/config"
 
 
 const StyledDiferencial = styled.div`
   padding: 1em 1em;
   display: flex;
   flex-direction: row;
-  color: ${colors.text.grey};
+  color: ${text.grey};
 `
 
 const StyledIcon = styled.div`

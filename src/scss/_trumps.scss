@@ -1,0 +1,14 @@
+@import "config";
+
+.carousel-indicators li {
+  background-color: $call-to-action;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  visibility: hidden;
+}
+
+.carousel-control-prev-icon {
+
+}

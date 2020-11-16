@@ -1,20 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import doubleQuotes from "../../images/double-quotes.svg"
-import colors from "../../styled/config"
+import {text} from "../../styled/config"
 
 
 const StyledDiferencial = styled.div`
   padding: 0 15px;
   display: flex;
   flex-direction: column;
-  color: ${colors.text.grey};
+  color: ${text.grey};
 `
 
 const StyledContent = styled.div`
   display: flex;
   flex-direction: row;
-  padding-left: 0.6em;
 `
 
 const StyledIcon = styled.div`
@@ -22,7 +21,6 @@ const StyledIcon = styled.div`
   background-size: 2.6em;
   padding: 1.3em;
 `
-
 
 const StyledText = styled.p`
   flex-direction: row;
